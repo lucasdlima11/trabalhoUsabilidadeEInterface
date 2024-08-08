@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cardápio Digital - Fast Food</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Cardápio Digital</h1>
+        
+        <div class="category">
+            <h2>Hambúrgueres</h2>
+            <div class="item">
+                <input type="checkbox" id="hamburger1" name="hamburger1">
+                <label for="hamburger1">Cheeseburger - Pão, Carne, Queijo - R$ 15,00</label>
+                <input type="number" name="quantity1" min="1" max="10" value="1" disabled>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="hamburger2" name="hamburger2">
+                <label for="hamburger2">Double Bacon - Pão, Carne, Queijo, Bacon - R$ 20,00</label>
+                <input type="number" name="quantity2" min="1" max="10" value="1" disabled>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Salgados</h2>
+            <div class="item">
+                <input type="checkbox" id="salgado1" name="salgado1">
+                <label for="salgado1">Coxinha - R$ 6,00</label>
+                <input type="number" name="quantity3" min="1" max="10" value="1" disabled>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="salgado2" name="salgado2">
+                <label for="salgado2">Empada - R$ 7,00</label>
+                <input type="number" name="quantity4" min="1" max="10" value="1" disabled>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Bebidas</h2>
+            <div class="item">
+                <input type="checkbox" id="bebida1" name="bebida1">
+                <label for="bebida1">Refrigerante Lata - R$ 5,00</label>
+                <input type="number" name="quantity5" min="1" max="10" value="1" disabled>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="bebida2" name="bebida2">
+                <label for="bebida2">Água Mineral - R$ 3,00</label>
+                <input type="number" name="quantity6" min="1" max="10" value="1" disabled>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h2>Carrinho de Compras</h2>
+            <p id="cartItems">Nenhum item selecionado.</p>
+            <p class="total">Total: R$ <span id="totalAmount">0,00</span></p>
+        </div>
+
+        <div class="finalize">
+            <h2>Finalizar Pedido</h2>
+            <form>
+                <label for="nome">Nome Completo:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="endereco">Endereço para Entrega:</label><br>
+                <input type="text" id="endereco" name="endereco" required><br><br>
+
+                <label for="pagamento">Forma de Pagamento:</label><br>
+                <input type="radio" id="debito" name="pagamento" value="debito" required>
+                <label for="debito">Cartão de Débito</label><br>
+                <input type="radio" id="credito" name="pagamento" value="credito">
+                <label for="credito">Cartão de Crédito</label><br>
+                <input type="radio" id="pix" name="pagamento" value="pix">
+                <label for="pix">Pix</label><br><br>
+
+                <button type="button" onclick="finalizarPedido()">Confirmar Pedido</button>
+                <button type="reset">Cancelar Pedido</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
