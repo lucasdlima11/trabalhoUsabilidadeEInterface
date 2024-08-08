@@ -32,4 +32,4 @@ Este projeto é um **cardápio digital interativo** criado para uma hamburgueria
 
 1. Clone este repositório para o seu ambiente local:
    ```bash
-   git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+   git clone https://github.com/lucasdlima11/trabalhoUsabilidadeEInterface.git
